@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance</title>
+    <link rel="stylesheet" href="../styles/studentDataStyles.css">
+</head>
+<body>
+    <form>
+        <label for="classes">Select Class: </label>
+        <select name="classes" id="classes" required>
+            <option value="Y1">Y1</option>
+            <option value="Y2">Y2</option>
+            <option value="Y3">Y3</option>
+            <option value="Y4">Y4</option>
+            <option value="Y5">Y5</option>
+            <option value="Y6">Y6</option>
+            <option value="Y7">Y7</option>
+            <option value="SMP1">SMP1</option>
+            <option value="Y8">Y8</option>
+            <option value="SMP2">SMP2</option>
+            <option value="Y9">Y9</option>
+            <option value="SMP3">SMP3</option>
+            <option value="Y10">Y10</option>
+            <option value="SMA1">SMA1</option>
+            <option value="Y11">Y11</option>
+            <option value="SMA2">SMA2</option>
+            <option value="Y12">Y12</option>
+            <option value="SMA3">SMA3</option>
+        </select>
+        <br><br>
+        <label for="date">Select Date: </label>
+        <input type="date" id="student-date" required>
+        <br>
+        <button type="button" class="search" id="filter">Filter</button>
+    </form>
+    <form>
+        <label for="search-student">Search Student: </label>
+        <input type="text" name="search-student" id="search-student" placeholder="Search a student" required>
+        <button type="button" class="search" id="search">Search</button>
+    </form>
+    <div class="table-container">
+        <div class="table">
+            <div class="header">Student_Id</div>
+            <div class="header">Student_name</div>
+            <div class="header">Attendance_time</div>            
+        </div>
+        <hr>
+        <div class="table" id="table">          
+        </div>
+    </div>
+    <div class="button-div">
+        <button id="export-btn">Export</button>
+    </div>
+    <script src="https://unpkg.com/export-from-json/dist/umd/index.min.js"></script>
+    <script src="../scripts/studentDataScript.js"></script>
+</body>
+</html>
