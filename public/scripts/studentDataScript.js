@@ -39,7 +39,7 @@ const setTable = (item) => {
         timeTag.required = true;         
 
         time.textContent = ' ';
-        submitBtn.textContent = 'Submit';
+        submitBtn.textContent = 'Update';
 
         time.appendChild(timeTag);
         time.appendChild(submitBtn);                               
