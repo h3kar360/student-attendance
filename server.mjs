@@ -25,7 +25,7 @@ mongoose.connect('mongodb://127.0.0.1/student_attendance')
 .then(() => console.log('Connected to database'))
 .catch((err) => console.log(err));
 
-const dateId = '66a4ddb5f4a9020c584e0515';
+const dateId = '66a4ddb5f4a9020c584e0515'; //add your own id for your date from mongodb
 
 const date = new Date();
 const currDate = ('0' + (date.getDate())).slice(-2) + '/' + ('0' + (date.getMonth() + 1)).slice(-2) + '/' + date.getFullYear();
@@ -36,7 +36,7 @@ const updateData = async () => {
         const lastDate = await LastDate.findById(dateId);
 
         if(lastDate.date !== currDate){
-            const currData = await Student.find({ date: '09/08/2024' });
+            const currData = await Student.find({ date: '09/08/2024' }); //change it to where the data can be duplicated
            
             const newData = currData.map((student) => ({
                 studentId: student.studentId,
